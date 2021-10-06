@@ -15,7 +15,7 @@ import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-   BarChart barChart;
+    BarChart barChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,20 +37,20 @@ public class MainActivity extends AppCompatActivity {
         xAxis.setGranularity(1);
         xAxis.setGranularityEnabled(true);
 
-         barChart.setDragEnabled(true);
-         barChart.setVisibleXRangeMaximum(3);
+        barChart.setDragEnabled(true);
+        barChart.setVisibleXRangeMaximum(4);
 
-         float barSpace = 0.08f;
-         float groupSpace= 0.44f;
-         data.setBarWidth(0.10f);
+        float barSpace = 0.008f;
+        float groupSpace= 0.80f;
+        data.setBarWidth(0.10f);
 
-         barChart.getXAxis().setAxisMinimum(0);
-         barChart.getXAxis().setAxisMaximum(0+barChart.getBarData().getGroupWidth(groupSpace,barSpace)*6);
-         barChart.getAxisLeft().setAxisMinimum(0);
+        barChart.getXAxis().setAxisMinimum(0);
+        barChart.getXAxis().setAxisMaximum(0+barChart.getBarData().getGroupWidth(groupSpace,barSpace)*6);
+        barChart.getAxisLeft().setAxisMinimum(0);
 
-         barChart.groupBars(0,groupSpace,barSpace);
+        barChart.groupBars(0,groupSpace,barSpace);
         barChart.animateY(2000);
-         barChart.invalidate();
+        barChart.invalidate();
 
 
 
